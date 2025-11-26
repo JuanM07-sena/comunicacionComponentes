@@ -1,11 +1,13 @@
+<!--Yo hice el mismo diseño que usted.... att: Juan Marín-->
 
-    
+<div class="app-layout">
+  <app-componente-uno></app-componente-uno>
 
-<app-componente-uno></app-componente-uno>
-<app-componente-dos></app-componente-dos>
-<app-componente-tres></app-componente-tres>
+  <div class="main-area">
+    <app-componente-dos></app-componente-dos>
 
-
-<router-outlet />
-
-
+    <main class="router-area">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

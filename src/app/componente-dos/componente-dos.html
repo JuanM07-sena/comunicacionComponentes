@@ -1,10 +1,13 @@
-<div class="componente2">
-<h1>Componente 2</h1>
+<aside class="side-nav">
+  <div class="title">{{ titulo() }}</div>
 
-<ul class="lista">
-    <li>Presentación</li>
-    <li class="fichas">Ficha 1</li>
-    <li class="fichas">Ficha 2</li>
-    <li class="fichas">Ficha 3</li>
-</ul>
-</div>
+  <ul class="options">
+    <li
+      *ngFor="let op of opciones(); index as i"
+      [class.active]="op === seleccion()"
+      (click)="navegar(op, i)"
+    >
+      {{ op }}
+    </li>
+  </ul>
+</aside>

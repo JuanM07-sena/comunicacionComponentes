@@ -1,5 +1,30 @@
-nav{
-    background-color: black;
-    display: block;
-    justify-items: center;
+.sena{
+  margin: 1px;
+  
+}
+.left-bar{
+  width:70px;
+  background:#111;
+  color:#fff;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:10px 6px;
+  border-right: 1px solid white;
+}
+.icon-btn{
+  background-color: #111;
+  width:48px;
+  height:48px;
+  margin:8px 0;
+  border-radius:8px;
+  border:none;
+  ;color:#fff;
+  cursor:pointer;
+}
+
+.icon-btn.active{
+background-color: red;
+
 }

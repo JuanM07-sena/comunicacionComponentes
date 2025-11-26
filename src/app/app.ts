@@ -1,16 +1,23 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-import { ComponenteUno } from "./componente-uno/componente-uno";
-import { ComponenteDos } from "./componente-dos/componente-dos";
-import { ComponenteTres } from "./componente-tres/componente-tres";
+import { ComponenteUno } from './componente-uno/componente-uno';
+import { ComponenteDos } from './componente-dos/componente-dos';
+import { ComunicacionService } from './servicios/servicios';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ComponenteUno, ComponenteDos, ComponenteTres],
+  standalone: true,
+  imports: [RouterOutlet, ComponenteUno, ComponenteDos],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('comunicacionComponentes');
+  constructor(private cs: ComunicacionService) {
+    this.cs.actualizar('Home', [
+      'Sena presentation',
+      'Ficha 3066474',
+      'Ficha 3333333',
+      'Cuarta opcion'
+    ]);
+  }
 }

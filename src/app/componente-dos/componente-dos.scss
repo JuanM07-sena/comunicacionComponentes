@@ -1,14 +1,33 @@
-.componente2{
-
+.side-nav{
+  width:220px;
+  background:#161616;
+  color:#ddd;
+  padding:18px;
+  height:100vh;
+  box-shadow: 2px 0 0 rgba(255,255,255,0.02);
+    border-right: 1px solid white;
 }
+.title{ font-weight:700;
+   margin-bottom:18px;
+    font-size:18px;
+     color:#fff;
+     text-align: center;
+     }
 
-.lista{
-    width: 200px;
-    padding: 10px;
-    list-style: none;
-  
+.options{ 
+  list-style:none; 
+  padding:0; 
+  margin:0;
+ }
+.options li{
+  padding:10px 8px;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  cursor:pointer;
+  font-size:14px;
 }
-.fichas{
-      border-top: 2px solid black;
-
+.options li.active{
+  border-bottom: 1px solid red;
+  background: rgba(235, 235, 235, 0.03);
+  border-left:4px solid #ff4b4b;
+  color:#ee0202;
 }

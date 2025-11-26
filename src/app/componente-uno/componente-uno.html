@@ -1,7 +1,10 @@
-<nav>
-<img src="sena.png" alt="" width="120px" height="120px">
-<button>Home</button>
-<button>Search</button>
-<button>HTML</button>
+<nav class="left-bar">
+  <div class="sena">
+    <H2>SENA</H2>
+  </div>
+
+  <button class="icon-btn" (click)="menu1()" [class.active]="activeMenu === 'menu1'"title="Menu 1">🏠</button>
+  <button class="icon-btn" (click)="menu2()"[class.active]="activeMenu === 'menu2'"title="Menu 2">🔍</button>
+  <button class="icon-btn" (click)="menuHTML()"[class.active]="activeMenu === 'menu3'" title="Menu 3">HTML</button>
 
 </nav>
